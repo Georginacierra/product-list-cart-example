@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "RedHatText";
+  src: url("./assets/fonts/static/RedHatText-Regular.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RedHatText";
+  src: url("./assets/fonts/static/RedHatText-Bold.ttf");
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "RedHatText";
+  src: url("./assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+
+:root {
+  /* colors */
+  --primaryColor: hsl(14, 86%, 42%);
+  --whiteColor: hsl(20, 50%, 98%);
+  --textColor: hsl(14, 65%, 9%);
+  --textLightColor: hsl(14, 25%, 72%);
+  --textGrayColor: hsl(12, 20%, 44%);
+
+  /* fonts */
+  --normalText: 1rem;
+  --smallText: 0.9rem;
+  --titleText: 2rem;
+  --subTitleText: 1.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: var(--normalText);
+}
+
+body {
+  font-family: "RedHatText";
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+}
+
+/* DESSERT SECTION */
+.desserts-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 800px;
+  padding: 30px;
+}
+
+.main-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.dessert-title {
+  color: var(--primaryColor);
+  font-size: var(--titleText);
+}
+
+.dessert-title {
+  margin-bottom: 30px;
+}
+
+/* cards design */
+.card {
+  width: 200px;
+  height: 320px;
+  border-radius: 8px;
+  position: relative;
+  overflow: visible;
+  background: whitesmoke;
+}
+
+.card-photo {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.photo-box {
+  height: 20rem;
+  width: 200px;
+}
+
+.add-to-cart-button {
+  border-style: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.product-info {
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 8px;
+}
+
+.product-info p {
+  padding: 2px;
+}
+
+.light-product-name {
+  color: var(--textGrayColor);
+  font-weight: 100;
+}
+
+.price {
+  color: var(--primaryColor);
+  font-weight: bold;
+}
+
+/* CART SECTION */
+
+.cart-section {
+  padding: 30px;
+  width: 600px;
+}
+
+.h2-title {
+  color: var(--primaryColor);
+  font-size: var(--subTitleText);
+}
+
+.selected-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4px;
+  position: relative;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 60px;
+  padding: 4px;
+  margin-bottom: 8px;
+}
+
+.selected-product-quantities {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.selected-product span {
+  color: var(--textGrayColor);
+}
+
+.selected-product-quantities span:first-child {
+  color: var(--primaryColor);
+}
+
+.selected-product-quantities span:last-child {
+  font-weight: bold;
+}
+
+.total-price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-price {
+  font-size: var(--subTitleText);
+  font-weight: bold;
+}
+
+.confirm-button {
+  border: none;
+  background: var(--primaryColor);
+  padding: 15px 40px;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 40px;
+  color: var(--whiteColor);
+  font-weight: bold;
+}
+
+.close-button {
+  border-style: none;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  background: none;
+  border: 2px solid var(--textLightColor);
+  top: 6px;
+  right: 8px;
+}
