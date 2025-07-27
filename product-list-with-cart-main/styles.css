@@ -42,6 +42,7 @@ body {
   font-style: normal;
   display: flex;
   justify-content: center;
+  background-color: var(--whiteColor);
 }
 
 /* DESSERT SECTION */
@@ -75,7 +76,7 @@ body {
   border-radius: 8px;
   position: relative;
   overflow: visible;
-  background: whitesmoke;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card-photo {
@@ -103,6 +104,30 @@ body {
   white-space: nowrap;
 }
 
+/* QUANTITY BUTTON */
+
+.quantity-controls {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.increment-button,
+.decrement-button {
+  border: solid 1px var(--whiteColor);
+  border-radius: 50%;
+  padding: 0 4px;
+  background: none;
+  margin: 2px;
+}
+
 .product-info {
   margin-top: 40px;
   width: 100%;
@@ -123,11 +148,41 @@ body {
   font-weight: bold;
 }
 
-/* CART SECTION */
+/* CART SECTION PRODUCTS EMPTY */
+.empty-cart-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.empty-cart-box img {
+  width: 400px;
+}
+
+.empty-cart-box p {
+  color: var(--textGrayColor);
+  font-weight: bold;
+}
+
+/* CART SECTION PRODUCTS SELECTED */
 .cart-section {
   padding: 30px;
-  width: 600px;
+  width: 500px;
+}
+
+.your-cart {
+  width: 100%;
+}
+
+.cart-box {
+  display: flex;
+  width: 100%;
+}
+
+.cart-box span {
+  margin-left: 8px;
+  font-weight: bold;
 }
 
 .h2-title {
@@ -139,18 +194,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 4px;
   position: relative;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 60px;
   padding: 4px;
-  margin-bottom: 8px;
+  margin: 8px 0;
 }
 
 .selected-product-quantities {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   margin-top: 4px;
 }
 
@@ -197,4 +251,29 @@ body {
   border: 2px solid var(--textLightColor);
   top: 6px;
   right: 8px;
+}
+
+/* POP UP CONFIRMATION */
+
+.pop-up-confirmation {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  background: var(--whiteColor);
+}
+
+.h3-title {
+  font-size: var(--subTitleText);
+  color: var(--normalText);
+}
+
+.confirmation-message p {
+  margin-bottom: 30px;
 }
